@@ -8,9 +8,13 @@
         [height]="i == 0 ? 50 : 90"
         separatorColor="red"
         columns="100, *, *, *, *, *"
-        [backgroundColor]="i == 0 ? 'rgb(91, 155, 213)' : 'white'"
+        [class.header]="i == 0"
       >
-        <Label *ngIf="i == 0; else exchange" col="0" [text]="item.exchange" class="padding"></Label>
+        <Label
+          col="0"
+          *ngIf="i == 0; else exchange"
+          [text]="item.exchange"
+          class="padding text-center"></Label>
         <ng-template #exchange>
           <Image col="0" [src]="'~/app/shared/images/exchanges/' + item.exchange + '.jpg'" class="exchange-logo"></Image>
         </ng-template>

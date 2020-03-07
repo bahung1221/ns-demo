@@ -1,11 +1,18 @@
 .market-summary {
   height: 100%;
   width: 100%;
-}
-.padding {
-  padding: 5 0;
-}
-.exchange-logo {
-  width: auto;
-  height: 36;
+  .header {
+    background-color: rgb(91, 155, 213);
+    color: #fff;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .padding {
+    padding: 5 0;
+  }
+  .exchange-logo {
+    width: auto;
+    height: 36;
+  }
 }
