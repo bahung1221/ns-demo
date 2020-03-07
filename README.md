@@ -1,5 +1,5 @@
 ## Nativescript demo app
-This demo is an Cryptocurrency market arbitrage (BTCUSD) that will get realtime data (price) from many cryptocurrency trading platform through their websocket server and then display in a mobile list view.
+This demo is an *cryptocurrency market arbitrage (BTCUSD)* app that will get realtime data (price) from many cryptocurrency trading platforms through their websocket server and then display in a mobile list view.
 
 **NOTE**: Because `NativeScript PREVIEW (Playground)` cannot support Websockets so we must either do a cloud build or a local build; `Preview` cannot use native "compiled" modules of which NS-Websocket is one of them... In this demo, i used local build on XCode simulator.
 
@@ -8,7 +8,6 @@ This demo is an Cryptocurrency market arbitrage (BTCUSD) that will get realtime 
 
 ### Run:
 Because we must do `local build` to make this demo work, so we must install [full nativescript system requirements](https://docs.nativescript.org/angular/start/general-requirements#full-setup-requirements) first.
-
 After that, just run this demo on simulator or connected device:
 
 - Install Nativescript cli:
@@ -42,3 +41,11 @@ open -a Simulator --args -CurrentDeviceUDID <DeviceUDID>
 # run
 tns run ios
 ```
+
+### NOTE:
+- If you use XCode 10, we prefer using iOS 10 when running iphone simulator (iOS 12-13 too laggy when running with XCode 10)
+
+### TODO:
+[] Unit test.
+[] End to End test.
+[] Try cloud build.
