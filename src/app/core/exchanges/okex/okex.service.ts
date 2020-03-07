@@ -33,7 +33,6 @@ export class OkexService implements IExchangeService {
 
     private _handleInstrumentMessage(data: any) : Market {
         const market = new Market();
-        console.log(data)
 
         market.last = this._formatPrice(data.last);
         market.buy = this._formatPrice(data.best_ask);
