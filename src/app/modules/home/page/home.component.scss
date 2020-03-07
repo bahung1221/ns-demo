@@ -8,6 +8,14 @@
   .text-center {
     text-align: center;
   }
+  .price {
+    &-up {
+      color: green;
+    }
+    &-down {
+      color: red;
+    }
+  }
   .padding {
     padding: 5 0;
   }

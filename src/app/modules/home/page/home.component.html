@@ -1,4 +1,4 @@
-<ActionBar title="BTCUSD Market Arbitrage (FX)"></ActionBar>
+<ActionBar title="Realtime Market Arbitrage (BTCUSD)"></ActionBar>
 
 <StackLayout height="100%">
   <ListView [items]="marketInfo" class="market-summary">
@@ -18,11 +18,11 @@
         <ng-template #exchange>
           <Image col="0" [src]="'~/app/shared/images/exchanges/' + item.exchange + '.jpg'" class="exchange-logo"></Image>
         </ng-template>
-        <Label col="1" [text]="item.buy" class="padding"></Label>
-        <Label col="2" [text]="item.sell" class="padding"></Label>
-        <Label col="3" [text]="item.last" class="padding"></Label>
-        <Label col="4" [text]="item.high" class="padding"></Label>
-        <Label col="5" [text]="item.low" class="padding"></Label>
+        <Label col="1" [text]="i == 0 ? item.buy : item.buy.price" [class]="'padding price-' + item.buy.status"></Label>
+        <Label col="2" [text]="i == 0 ? item.sell : item.sell.price" [class]="'padding price-' + item.sell.status"></Label>
+        <Label col="3" [text]="i == 0 ? item.high : item.high.price" [class]="'padding price-' + item.high.status"></Label>
+        <Label col="4" [text]="i == 0 ? item.low : item.low.price" [class]="'padding price-' + item.low.status"></Label>
+        <Label col="5" [text]="i == 0 ? item.last : item.last.price" [class]="'padding price-' + item.last.status"></Label>
       </GridLayout>
     </ng-template>
   </ListView>

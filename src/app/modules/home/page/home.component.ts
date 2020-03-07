@@ -4,6 +4,11 @@ import { WebsocketService } from "~/app/core/services/websocket.service";
 import { Market } from "~/app/shared/data-classes/market";
 
 const EXCHANGES = ['BYBIT', 'DERIBIT', 'BITMEX', 'OKEX', 'LIQUID', 'BITMAX'];
+const PRICE_STATUSES = {
+    NORMAL: 'normal',
+    UP: 'up',
+    DOWN: 'down',
+};
 
 @Component({
     selector: "Home",
@@ -36,9 +41,11 @@ export class HomeComponent implements OnInit {
             const index = this.marketInfo.findIndex(cur => cur.exchange === newMarketInfo.exchange);
 
             if (index >= 0) {
+                const oldMarketInfo = this.marketInfo[index];
+
                 this.marketInfo[index] = {
                     exchange: newMarketInfo.exchange,
-                    ...newMarketInfo.market
+                    ...this._convertNewMarketInfo(oldMarketInfo, newMarketInfo.market)
                 };
             }
         })
@@ -48,12 +55,59 @@ export class HomeComponent implements OnInit {
         EXCHANGES.forEach(exchange => {
             this.marketInfo.push({
                 exchange,
-                buy: 0,
-                sell: 0,
-                last: 0,
-                high: 0,
-                low: 0,
+                buy: {
+                    price: 0,
+                    status: PRICE_STATUSES.NORMAL,
+                },
+                sell: {
+                    price: 0,
+                    status: PRICE_STATUSES.NORMAL,
+                },
+                last: {
+                    price: 0,
+                    status: PRICE_STATUSES.NORMAL,
+                },
+                high: {
+                    price: 0,
+                    status: PRICE_STATUSES.NORMAL,
+                },
+                low: {
+                    price: 0,
+                    status: PRICE_STATUSES.NORMAL,
+                },
             })
         })
+    }
+
+    private _convertNewMarketInfo(oldMarketInfo: any, newMarketInfo: Market) {
+        return {
+            buy: {
+                price: newMarketInfo.buy,
+                status: this._getPriceStatus(oldMarketInfo.buy.price, newMarketInfo.buy, oldMarketInfo.buy.status),
+            },
+            sell: {
+                price: newMarketInfo.sell,
+                status: this._getPriceStatus(oldMarketInfo.sell.price, newMarketInfo.sell, oldMarketInfo.sell.status),
+            },
+            last: {
+                price: newMarketInfo.last,
+                status: this._getPriceStatus(oldMarketInfo.last.price, newMarketInfo.last, oldMarketInfo.last.status),
+            },
+            high: {
+                price: newMarketInfo.high,
+                status: this._getPriceStatus(oldMarketInfo.high.price, newMarketInfo.high, oldMarketInfo.high.status),
+            },
+            low: {
+                price: newMarketInfo.low,
+                status: this._getPriceStatus(oldMarketInfo.low.price, newMarketInfo.low, oldMarketInfo.low.status),
+            },
+        }
+    }
+
+    private _getPriceStatus(oldPrice: number, newPrice: number, oldStatus: string) : string {
+        if (oldPrice > newPrice) return PRICE_STATUSES.DOWN;
+        if (newPrice > oldPrice) return PRICE_STATUSES.UP;
+
+        return oldStatus;
     }
 }
