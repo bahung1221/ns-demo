@@ -1,13 +1,14 @@
 FlexboxLayout {
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-image: url("~/app/shared/images/background1.jpg");
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-image: url("~/app/shared/images/background1.jpg");
 }
 StackLayout {
-    width: 300;
-    padding: 25 16;
-    background-color: rgba(240, 240, 240, 0.9);
+  width: 300;
+  padding: 25 16;
+  background-color: rgba(240, 240, 240, 0.9);
+  border-radius: 15;
 }
 Image {
   margin-bottom: 20;
