@@ -3,7 +3,7 @@ import { MarketInfoService } from "~/app/core/services/market-info.service";
 import { WebsocketService } from "~/app/core/services/websocket.service";
 import { Market } from "~/app/shared/data-classes/market";
 
-const EXCHANGES = ['BYBIT', 'DERIBIT'];
+const EXCHANGES = ['BYBIT', 'DERIBIT', 'BITMEX', 'OKEX', 'LIQUID', 'BITMAX'];
 
 @Component({
     selector: "Home",
@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
                 this.marketInfo[index] = {
                     exchange: newMarketInfo.exchange,
                     ...newMarketInfo.market
-                }
+                };
             }
         })
     }

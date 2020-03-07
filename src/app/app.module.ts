@@ -13,7 +13,7 @@ import { AppComponent } from "./app.component";
         AppRoutingModule
     ],
     declarations: [
-        AppComponent
+        AppComponent,
     ],
     schemas: [
         NO_ERRORS_SCHEMA

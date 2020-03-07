@@ -4,6 +4,7 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 import { HomeRoutingModule } from "./home-routing.module";
 import { HomeComponent } from "./page/home.component";
+import { PriceFormatPipe } from "~/app/shared/pipes/price-format.pipe";
 
 @NgModule({
     imports: [
@@ -12,7 +13,8 @@ import { HomeComponent } from "./page/home.component";
         NativeScriptFormsModule
     ],
     declarations: [
-        HomeComponent
+        HomeComponent,
+        PriceFormatPipe,
     ],
     schemas: [
         NO_ERRORS_SCHEMA
