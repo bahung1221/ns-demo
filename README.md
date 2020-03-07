@@ -1,5 +1,7 @@
-## Nativescript demo app
-This demo is an *cryptocurrency market arbitrage (BTCUSD)* app that will get realtime data (price) from many cryptocurrency trading platforms through their websocket server and then display in a mobile list view.
+## Cryptocurrency market difference demo app
+This demo is an app that updates the price difference information of the cryptocurrency market (BTC/USD), this app will get realtime prices data from multiple cryptocurrency trading platforms (exchanges) through their websocket server and then display in a mobile list view for users to compare..
+
+- Cryptocurrency exchanges: [Bybit](https://www.bybit.com/), [Deribit](https://www.deribit.com/), [Bitmex](https://www.bitmex.com/), [Okex](https://www.okex.com/en), [Liquid](https://www.liquid.com/), [Bitmax](https://www.bitmex.com/)
 
 **NOTE**: Because `NativeScript PREVIEW (Playground)` cannot support Websockets so we must either do a cloud build or a local build; `Preview` cannot use native "compiled" modules of which NS-Websocket is one of them... In this demo, i used local build on XCode simulator.
 
@@ -46,6 +48,6 @@ tns run ios
 - If you use XCode 10, we prefer using iOS 10 when running iphone simulator (iOS 12-13 too laggy when running with XCode 10)
 
 ### TODO:
-[] Unit test.
-[] End to End test.
-[] Try cloud build.
+- [ ] Unit test.
+- [ ] End to End test.
+- [ ] Try cloud build.
