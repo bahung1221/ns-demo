@@ -4,7 +4,7 @@ This demo is an Cryptocurrency market arbitrage (BTCUSD) that will get realtime 
 **NOTE**: Because `NativeScript PREVIEW (Playground)` cannot support Websockets so we must either do a cloud build or a local build; `Preview` cannot use native "compiled" modules of which NS-Websocket is one of them... In this demo, i used local build on XCode simulator.
 
 ### Demo:
-![Demo Video](https://github.com/bahung1221/ns-demo/tree/master/src/app/shared/images/demo.gif)
+![Demo Video](https://github.com/bahung1221/ns-demo/raw/master/src/app/shared/images/demo.gif)
 
 ### Run:
 - Install Nativescript cli:
