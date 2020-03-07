@@ -7,6 +7,10 @@ This demo is an Cryptocurrency market arbitrage (BTCUSD) that will get realtime 
 <img src="https://github.com/bahung1221/ns-demo/raw/master/src/app/shared/images/demo.gif" width="400" alt="Demo Video">
 
 ### Run:
+Because we must do `local build` to make this demo work, so we must install [full nativescript system requirements](https://docs.nativescript.org/angular/start/general-requirements#full-setup-requirements) first.
+
+After that, just run this demo on simulator or connected device:
+
 - Install Nativescript cli:
 ```
 npm install -g nativescript
