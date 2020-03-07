@@ -8,6 +8,9 @@ import { Router } from "@angular/router";
 })
 export class LoginComponent implements OnInit {
 
+    email = 'btcusd-arbitrage@demo.com';
+    password = 'btcusd-arbitrage';
+
     constructor(private router: Router) {
     }
 
@@ -15,6 +18,7 @@ export class LoginComponent implements OnInit {
     }
 
     submit() {
+        // TODO: implement login
         this.router.navigate(['/home'])
     }
 }

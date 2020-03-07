@@ -38,6 +38,13 @@ export class WebsocketService {
         })
     }
 
+    /**
+     * Attach event listeners to websocket instance
+     *
+     * @param exchange
+     * @param ws
+     * @param service
+     */
     private initWS(exchange: string, ws: WebSocket, service: IExchangeService) {
         ws.addEventListener('open', event => {
             this.zone.run(() => service.subscribe(ws));

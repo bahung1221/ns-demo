@@ -11,6 +11,12 @@ export class MarketInfoService {
 
     constructor() {}
 
+    /**
+     * Update new market info for specific exchange
+     *
+     * @param exchange
+     * @param market
+     */
     public updateMarketInfo(exchange: string, market: Market) {
         if (!this.marketInfo[exchange]) {
             this.marketInfo[exchange] = market;

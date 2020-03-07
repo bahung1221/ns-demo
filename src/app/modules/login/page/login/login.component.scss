@@ -2,10 +2,26 @@ FlexboxLayout {
     justify-content: center;
     align-items: center;
     background-size: cover;
-    background-image: url("~/app/shared/images/background.jpg");
+    background-image: url("~/app/shared/images/background1.jpg");
 }
 StackLayout {
     width: 300;
-    padding: 10 16;
-    background-color: #f0f0f0;
+    padding: 25 16;
+    background-color: rgba(240, 240, 240, 0.9);
+}
+Image {
+  margin-bottom: 20;
+  height: 70;
+}
+Button, TextField {
+  margin-bottom: 10;
+}
+.btn-primary {
+  background-color: #CB1D00;
+  margin-left: 0;
+  margin-right: 0;
+}
+TextField {
+  placeholder-color: #C4AFB4;
+  color: black;
 }
