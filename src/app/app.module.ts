@@ -3,7 +3,6 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { LoginComponent } from "./login/login.component";
 
 @NgModule({
     bootstrap: [
@@ -14,8 +13,7 @@ import { LoginComponent } from "./login/login.component";
         AppRoutingModule
     ],
     declarations: [
-        AppComponent,
-        LoginComponent,
+        AppComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA

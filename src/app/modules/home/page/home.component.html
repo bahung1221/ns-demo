@@ -1,0 +1,21 @@
+<ActionBar title="Groceries"></ActionBar>
+
+<ScrollView>
+  <StackLayout>
+    <ListView [items]="marketInfo">
+      <ng-template let-item="item" let-i="index">
+        <GridLayout
+          columns="80, *, *, *, *, *"
+          [backgroundColor]="i == 0 ? 'rgb(91, 155, 213)' : 'white'"
+        >
+          <Label col="0" [text]="item.exchange" class="padding"></Label>
+          <Label col="1" [text]="item.buy" class="padding"></Label>
+          <Label col="2" [text]="item.sell" class="padding"></Label>
+          <Label col="3" [text]="item.last" class="padding"></Label>
+          <Label col="4" [text]="item.high" class="padding"></Label>
+          <Label col="5" [text]="item.low" class="padding"></Label>
+        </GridLayout>
+      </ng-template>
+    </ListView>
+  </StackLayout>
+</ScrollView>
